@@ -77,7 +77,7 @@ function isSubscribed() {
 }
 document.getElementById('btn').addEventListener('click', isSubscribed);
 
-/* ====================================
+* ====================================
 ? Automatic (Self-Invoked) Invocation
 * Executes immediately after being defined.
 * Commonly used with Immediately Invoked Function Expressions (IIFEs).
@@ -98,7 +98,7 @@ console.log("I am sefl call Function",message)
 
 }('Yes I am here'))
 
-/* ===================
+* ===================
 ? Anonymous Function
 ===================== */
 = 1
@@ -142,13 +142,44 @@ console.log(result)
 let arrofunction = (x,y) => (x*y);
 
 console.log(arrofunction(5,6))
----------------------------------
-let hello = "";
 
-hello = () => {
-  return "Hello World!";
+/* All #loop #Loop */
+-------------------------------------------------------
+
+
+// #For Loop Over Array 
+----------------------------------------------------
+const cars = ["Saab", "Volvo", "BMW","Saab2", "Volvo2", "BMW2"];
+
+for(i=0; i<cars.length;i++){
+
+console.log(cars[i])
+
 }
-console.log(hello())
+// #For In Loop Over Array 
+-------------------------------------------------------------
+const cars = ["Saab", "Volvo", "BMW","Saab2", "Volvo2", "BMW2"];
 
-// JavaScript Objects:
-====================
+for(let item in cars){
+
+console.log(cars[item])
+
+}
+/* Object */
+=====================
+const person = {
+  firstName : 'Jon',
+  lastName: 'Than',
+  email:'jon@email.com',
+  fullName:function(){
+      // return `this.firstName+ '' + this.lastName`;
+      return `${this.firstName} ${this.lastName}`;
+  },
+  //Another way function call
+  greet(){
+      return `wellcome ${this.fullName()}`
+  }
+}
+console.log(person.fullName())
+console.log(person.greet())
+
